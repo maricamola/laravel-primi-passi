@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $text = [
+        'welcome' => 'This is my frist home page',
+    ];
+    return view('home', $text);
 });
