@@ -15,7 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $text = [
-        'welcome' => 'This is my frist home page',
+        'welcome' => 'This is my frist homepage',
     ];
     return view('home', $text);
-});
+})->name('home');
+
+Route::get('/our_experiences', function () {
+    return view('experiences');
+})->name('experiences');
+
+Route::get('/info', function () {
+    return view('contacts');
+})->name('contacts');
